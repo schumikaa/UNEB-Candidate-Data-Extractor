@@ -1,0 +1,63 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Candidate_Data_Extractor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="714" Width="989" WindowState="Maximized" FontFamily="Arial" FontSize="14">
+    <Window.Background>
+        <ImageBrush ImageSource="/368311.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid Margin="5,5,5,5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Schumikaa: UNEB PLE Candidates' Data Extractor" HorizontalAlignment="Stretch" Margin="0,0,0,5" VerticalAlignment="Stretch" Background="#FF263B47" Foreground="#FFDDDDDD" VerticalContentAlignment="Center" Grid.ColumnSpan="4" Padding="5,0,5,0" FontWeight="Bold"/>
+        <Border BorderThickness="1" BorderBrush="#FFBD08FF" Grid.Column="1" Grid.Row="1" CornerRadius="5,5,5,5">
+            <Grid Margin="5,5,5,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Extracted Data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FFBD08FF" FontWeight="Bold" VerticalContentAlignment="Center" Padding="5,0,5,0" Foreground="#FFDDDDDD"/>
+                <ListBox x:Name="ExtractedDataList" Grid.Row="1" Background="#7F000000" BorderBrush="#FFBD08FF" Foreground="#FFDDDDDD" Padding="5,0,5,5" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+            </Grid>
+        </Border>
+        <Border BorderThickness="1" BorderBrush="#FF263B47" Grid.Row="1" Margin="0,0,5,0" Padding="5,5,5,5" CornerRadius="5,5,5,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button x:Name="ChooseFileBtn" Content="Choose Excel File" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="1" Margin="0,0,5,2" HorizontalContentAlignment="Left" Padding="5,0,5,0" BorderBrush="#7F8783FC" Background="#7F8783FC" Foreground="Black"/>
+                <Button x:Name="ExtractDataBtn" Content="Extract" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,2" Padding="5,0,5,0" Background="#FF7670FE" BorderBrush="#FF04006C" Foreground="Black"/>
+                <Border BorderThickness="1" BorderBrush="#FF263B47" Grid.Row="2" Grid.ColumnSpan="2" Margin="0,5,0,5">
+                    <Grid Margin="3,3,3,3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="CopyAllContentToFile" Content="Copy Content" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#7F8FD6FF" BorderBrush="#FFA5A2FA" Margin="0,0,5,0"/>
+                        <Button Content="..." Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#7F8FD6FF" BorderBrush="#FFA5A2FA" Margin="0,0,5,0"/>
+                        <Button Content="..." Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#7F8FD6FF" BorderBrush="#FFA5A2FA"/>
+                    </Grid>
+                </Border>
+                <Button x:Name="ChooseMultiple" Content="Choose Multiple" HorizontalAlignment="Stretch" Grid.Row="1" VerticalAlignment="Stretch" HorizontalContentAlignment="Left" Grid.ColumnSpan="2" Margin="0,5,0,0" Padding="5,0,5,0" Background="#FFDDB4B4" BorderBrush="#FFDDB4B4"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>
